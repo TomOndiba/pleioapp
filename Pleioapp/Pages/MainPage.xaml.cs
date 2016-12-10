@@ -21,7 +21,7 @@ namespace Pleioapp
         private async void SitesListViewOnItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
             _app.CurrentSite = e.SelectedItem as Site;
-            BindingContext = _app.CurrentSite;
+            LeftMenu.BindingContext = _app.CurrentSite;
             LeftMenu.Groups.Clear();
             LeftMenu.ToggleSubsiteMenu();
             await LeftMenu.GetGroups();
